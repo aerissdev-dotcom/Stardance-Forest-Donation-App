@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #14311C;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+.left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.right {
+    width: 50%;
+    max-width: 50%;
+}
+img {
+    min-height: 100vh;
+    max-width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 45px;
+}
+
+p {
+    font-size: 39px;
+    margin-bottom: 20px;
+    color: mediumspringgreen;
+}
+
+span {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.donationInfo {
+    font-size: 17px;
+    padding: 80px;
+}
+
+b {
+    color: rgb(7, 186, 118);
+}
+
+input {
+    border: 2px solid rgb(24, 131, 90);
+    border-radius: 40px;
+    width: 60%;
+    max-width: 350px;
+    min-width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#donateButton {
+    background-color: rgb(31, 125, 89);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#donateButton:hover {
+    background-color: rgb(40, 168, 119);
+}
+
+.collectedMoneyInformation {
+    font-weight: 300;
+    margin-top: 60px;
+}
+
+.collectedMoney {
+    color: white;
+    background-color: transparent;
+}
+
+footer {
+    font-weight: 200;
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    background-color: #0e2314;
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
+    width: 45%;
+    border-radius: 30px;
+    color: mediumspringgreen;
+}
+
+a {
+    color: rgb(143, 255, 156);
+    background-color: transparent;
+}
+
+/* Responsive for tablets */
+@media (max-width: 1024px) {
+    .containers {
+        flex-direction: column;
+    }
+    .left {
+        width: 100%;
+        padding: 30px 20px;
+    }
+    .right {
+        width: 100%;
+        max-width: 100%;
+    }
+    img {
+        min-height: 300px;
+        max-height: 400px;
+        width: 100%;
+        border-top-left-radius: 0;
+    }
+    p {
+        font-size: 32px;
+    }
+    footer {
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+/* Responsive for smartphones */
+@media (max-width: 600px) {
+    p {
+        font-size: 24px;
+    }
+    span {
+        font-size: 16px;
+    }
+    .donationInfo {
+        padding: 30px 10px;
+        font-size: 15px;
+    }
+    input {
+        width: 90%;
+        height: 45px;
+    }
+    img {
+        min-height: 200px;
+        max-height: 300px;
+    }
+    .collectedMoneyInformation {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+}

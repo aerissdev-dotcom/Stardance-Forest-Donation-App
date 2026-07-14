@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Dotation UI Template</title>
+</head>
+<body>
+    <div class="containers">
+        <div class="left">
+            <p>Help our forests grow larger than ever.</p>
+            <span>
+                With our special program, we plant seeds across the whole rainforest.
+            </span>
+            <div class = "donationInfo">
+                How much money would you like to donate?
+                It's entirely up to <b>you.</b>
+            </div>
+            <form action="index.html" method="POST">
+                <input type="number" name="moneyAmount" id="moneyAmountForm" placeholder="$" min = "1" step = "1" required>
+                <input type = "text" name = "creditCardNumber" id = "creditCardNumberForm" placeholder="Your Credit Card Number" inputmode="numeric" pattern="[0-9]{16}" maxlength="16" autocomplete="cc-number" required>
+                <input type="text" name="fullName" id="fullNameForm" placeholder="Your Full Name" autocomplete="name" capitalize="words" pattern="^[A-Za-zŻżÓóŁłĆćĘęĄąŚśŹźŃń]{2,}\s[A-Za-zŻżÓóŁłĆćĘęĄąŚśŹźŃń]{2,}.*$" required>
+                <input type="text" name="ccExpiration" id="ccExpirationForm" placeholder="MM/YY"inputmode="numeric" maxlength="5" autocomplete="cc-exp" oninput="this.value = this.value.replace(/[^\d]/g, '').replace(/(.{2})/, '$1/').trim();" required>
+                <input type="text" name="ccCvc" id="ccCvcForm" placeholder="CVC" inputmode="numeric" pattern="[0-9]{3,4}" maxlength="4" autocomplete="cc-csc" required>
+                <input type="submit" value="Donate" id = "donateButton">
+            </form>
+            <span class = "collectedMoneyInformation">So far, we have collected <span><b class="collectedMoney"></b></span> for our forests. Stupendous!</span>
+            <footer>This is a simple UI Template, not a factual donation site. If you are willing to donate real money, visit&nbsp;<a href = "https://lasnazawsze.org.pl/en/forest-forever-foundation/">this site.</a></footer>
+            </div>
+        <div class="right">
+            <img src="forestImage.png" alt="Image of forest" height="1000">
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
