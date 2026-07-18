@@ -7,6 +7,12 @@
     <title>Simple Dotation UI Template</title>
 </head>
 <body>
+    <div id="popup" class="popup">
+    <div class="popup-content">
+        <div>Thank you for your donation! This is a demo template. If you want to donate real money, visit <a href="https://lasnazawsze.org.pl/en/forest-forever-foundation/" target="_blank">this site</a>.</div>
+        <button id="closePopup">Close</button>
+    </div>
+</div>
     <div class="containers">
         <div class="left">
             <p>Help our forests grow larger than ever.</p>
@@ -17,7 +23,7 @@
                 How much money would you like to donate?
                 It's entirely up to <b>you.</b>
             </div>
-            <form action="index.html" method="POST">
+            <form action="index.html" method="GET">
                 <input type="number" name="moneyAmount" id="moneyAmountForm" placeholder="$" min = "1" step = "1" required>
                 <input type = "text" name = "creditCardNumber" id = "creditCardNumberForm" placeholder="Your Credit Card Number" inputmode="numeric" pattern="[0-9]{16}" maxlength="16" autocomplete="cc-number" required>
                 <input type="text" name="fullName" id="fullNameForm" placeholder="Your Full Name" autocomplete="name" capitalize="words" pattern="^[A-Za-zŻżÓóŁłĆćĘęĄąŚśŹźŃń]{2,}\s[A-Za-zŻżÓóŁłĆćĘęĄąŚśŹźŃń]{2,}.*$" required>

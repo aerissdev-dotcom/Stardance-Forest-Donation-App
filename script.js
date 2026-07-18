@@ -16,3 +16,13 @@ if (alreadyDonated) {
 
     addRandomMoney();
 }
+
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('popup').classList.add('active');
+    this.reset();
+});
+
+document.getElementById('closePopup').addEventListener('click', function() {
+    document.getElementById('popup').classList.remove('active');
+});
