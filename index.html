@@ -3,41 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeriss - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Simple Dotation UI Template</title>
 </head>
 <body>
-    <div id="popup" class="popup">
-    <div class="popup-content">
-        <div>Thank you for your donation! This is a demo template. If you want to donate real money, visit <a href="https://lasnazawsze.org.pl/en/forest-forever-foundation/" target="_blank">this site</a>.</div>
-        <button id="closePopup">Close</button>
-    </div>
-</div>
-    <div class="containers">
-        <div class="left">
-            <p>Help our forests grow larger than ever.</p>
-            <span>
-                With our special program, we plant seeds across the whole rainforest.
-            </span>
-            <div class = "donationInfo">
-                How much money would you like to donate?
-                It's entirely up to <b>you.</b>
-            </div>
-            <form action="index.html" method="GET">
-                <input type="number" name="moneyAmount" id="moneyAmountForm" placeholder="$" min = "1" step = "1" required>
-                <input type = "text" name = "creditCardNumber" id = "creditCardNumberForm" placeholder="Your Credit Card Number" inputmode="numeric" pattern="[0-9]{16}" maxlength="16" autocomplete="cc-number" required>
-                <input type="text" name="fullName" id="fullNameForm" placeholder="Your Full Name" autocomplete="name" capitalize="words" pattern="^[A-Za-zŻżÓóŁłĆćĘęĄąŚśŹźŃń]{2,}\s[A-Za-zŻżÓóŁłĆćĘęĄąŚśŹźŃń]{2,}.*$" required>
-                <input type="text" name="ccExpiration" id="ccExpirationForm" placeholder="MM/YY"inputmode="numeric" maxlength="5" autocomplete="cc-exp" oninput="this.value = this.value.replace(/[^\d]/g, '').replace(/(.{2})/, '$1/').trim();" required>
-                <input type="text" name="ccCvc" id="ccCvcForm" placeholder="CVC" inputmode="numeric" pattern="[0-9]{3,4}" maxlength="4" autocomplete="cc-csc" required>
-                <input type="submit" value="Donate" id = "donateButton">
-            </form>
-            <span class = "collectedMoneyInformation">So far, we have collected <span><b class="collectedMoney"></b></span> for our forests. Stupendous!</span>
-            <footer>This is a simple UI Template, not a factual donation site. If you are willing to donate real money, visit&nbsp;<a href = "https://lasnazawsze.org.pl/en/forest-forever-foundation/">this site.</a></footer>
-            </div>
-        <div class="right">
-            <img src="forestImage.png" alt="Image of forest" height="1000">
+
+<div class="container">
+    <header class="site-header">
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Hi, I'm Aeriss.</h1>
+        <p class="subtitle">I build simple, working websites and apps. After hours, I play badminton.</p>
+        <div class="btn-group">
+            <a href="projects.html" class="btn">View projects</a>
+            <a href="contact.html" class="btn btn-outline">Contact</a>
         </div>
-    </div>
+    </section>
+
+    <section>
+        <h2>About me</h2>
+        <div class="about-grid">
+            <div>
+                <p>I've been doing frontend for five years. I like clean code and clear interfaces. I use React daily, but I'm also comfortable with plain HTML and CSS.</p>
+                <p>Outside of work, I play badminton four times a week in an amateur league. I think programming and sports have more in common than people realize.</p>
+            </div>
+            <div class="about-stats">
+                <div><span class="label">Coding for</span><strong>5 years</strong></div>
+                <div><span class="label">Playing badminton for</span><strong>9 years</strong></div>
+                <div><span class="label">Favorite framework</span><strong>React</strong></div>
+                <div><span class="label">Coffee per day</span><strong>3–4</strong></div>
+            </div>
+        </div>
+    </section>
+</div>
+
 </body>
-<script src="script.js"></script>
 </html>
